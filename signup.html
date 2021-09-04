@@ -51,21 +51,26 @@
               <hr>
 
               <label class="label" for="name"><b>Name</b></label>
-              <input type="text" placeholder="Enter Name" name="name">
+              <input type="text" placeholder="Enter Name" name="name" required>
           
               <label class="label" for="psw"><b>Age</b></label>
-              <input type="text" placeholder="Enter Age" name="age">
+              <input type="text" placeholder="Enter Age" name="age" required>
 
           
-              <label class="label" for="mob"><b>Mobile Number</b></label>
-              <input type="text" placeholder="Enter Mobile Number" name="mob">
+              <label class="label" for="mob"><b>Mobile Number</b></label> <br>
+              <input type="text" placeholder="+91" id="code">
+              <input type="text" id="mob" placeholder="Enter Mobile Number" name="mob" onkeyup="phonenumber(this.value);" required>
+              <span  id="checkphn"></span><br /><br>
 
               <label class="label" for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email">
-          
+              <input type="text" id="mail" placeholder="Enter Email" name="email" onkeyup="validate(this.value);" required>
+              <span  id="check"></span><br /><br>
+             
+
               <label class="label" for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw">
-          
+              <input type="password" id="password" placeholder="Enter Password" name="psw" class="form-control" onkeyup="isGood(this.value)"  required>
+              <small class="help-block" id="password-text"></small>
+
               <!-- <label class="label" for="psw-repeat"><b>Repeat Password</b></label>
               <input type="password" placeholder="Repeat Password" name="psw-repeat">
           
@@ -95,6 +100,8 @@
       </div>
       
       <!-- FOOTER ENDS HERE -->
+
+      <script src="js/signup.js"></script>
         
     </body>
     </html>
