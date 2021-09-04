@@ -11,5 +11,18 @@
         }
     }
 
+    function checkPassword(str) {
+        var psw = document.getElementById("txtPassword").value;
+        var lblError = document.getElementById("password_strength");     
+        var expr = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}/;
+        if (!expr.test(psw)) {
+            lblError.innerHTML = "Can be more strong";
+        }
+        else{
+            lblError.innerHTML="";
+        }
+    }
+
+
     
    

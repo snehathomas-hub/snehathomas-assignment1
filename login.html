@@ -54,8 +54,10 @@
                 <span id="lblError" style="color: red"></span>
               <br><br>
                 <label for="psw"><b>Password</b></label>
-                <input type="password" id="txtPassword" placeholder="Enter Password" required>
-                <span id="password_strength"></span>
+                <input type="password" id="txtPassword" placeholder="Enter Password" onkeyup="checkPassword();" required>
+                <span id="password_strength" style="color: red"></span>
+                <!-- <input type="password" id="pass" >
+                <span id="lblError" ></span> -->
                     
                 <button type="submit">Login</button>
                 
@@ -81,7 +83,7 @@
       
       <!-- FOOTER ENDS HERE -->
       <script defer src="js/login.js"></script>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
 <script type="text/javascript">
     $(function () {
         $("#txtPassword").bind("keyup", function () {
